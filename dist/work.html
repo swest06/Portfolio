@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- animate on scroll -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/69b59fda54.js"></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Sean West | Work</title>
+  </head>
+
+  <body id="body" class="preload">
+    <!-- Load Screen -->
+    <div id="load-screen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header-inner">
+      <div class="container">
+        <nav id="main-nav">
+          <h1 id="logo"><a href="index.html">sw</a></h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home-a">About</a></li>
+            <li><a href="#header-inner" class="current">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section A: Gallery -->
+    <section
+      id="work-a"
+      class="text-center py-3 wow fadeInUp"
+      data-wow-delay=".5s"
+    >
+      <div class="container">
+        <h2 class="section-title">My Work</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">See some of the projects I've done</p>
+        <div class="items wow fadeInUp" data-wow-delay="1.5s">
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item1.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+                <div class="item-links">
+                  <a href=""><i class="fas fa-eye"></i></a>
+                  <a href=""><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item1.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Front-End</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+                <div class="item-links">
+                  <a href=""><i class="fas fa-eye"></i></a>
+                  <a href=""><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="img/items/item1.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <p class="item-text-category">Design</p>
+                <h2 class="item-text-title">Great Gradients</h2>
+                <div class="item-links">
+                  <a href=""><i class="fas fa-eye"></i></a>
+                  <a href=""><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <div class="social">
+          <a href="https://linkedin.com/in/sean-west-b83192105"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/swest06"><i class="fab fa-github"></i></a>
+          <a href="https://stackexchange.com/users/13923124/sean?tab=top"
+            ><i class="fab fa-stack-exchange"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <!-- page load logic -->
+    <script>
+      window.addEventListener("load", function() {
+        let loadScreen = document.getElementById("load-screen");
+        document.body.removeChild(loadScreen);
+
+        let body = document.getElementById("body");
+        body.classList.remove("preload");
+      });
+    </script>
+  </body>
+</html>

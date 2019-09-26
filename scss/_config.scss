@@ -1,0 +1,19 @@
+//Variables
+$website-width: 1080px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$blue-color: #00104a;
+$dark-color: #010a2b;
+$darker-color: #333;
+$background-image1: url("../img/london1.jpg");
+$background-image2: url("../img/black-and-white-electronics.jpg");
+
+// Text Color function
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

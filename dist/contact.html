@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <script src="https://kit.fontawesome.com/69b59fda54.js"></script>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Logo Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Sean West | Contact</title>
+  </head>
+
+  <body id="body" class="preload">
+    <!-- Load Screen -->
+    <div id="load-screen">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header-inner">
+      <div class="container">
+        <nav id="main-nav">
+          <h1 id="logo"><a href="index.html">sw</a></h1>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#home-a">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="#header-inner" class="current">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section A: Contact Form -->
+    <section
+      id="contact-a"
+      class="text-center py-3 wow fadeInUp"
+      data-wow-delay=".5s"
+    >
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">Let's talk</p>
+
+        <form class="wow fadeInUp" data-wow-delay="1.5s">
+          <div class="text-fields">
+            <input
+              type="text"
+              class="text-input name-input"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              class="text-input subject-input"
+              placeholder="Subject"
+            />
+            <input
+              type="email"
+              class="text-input email-input"
+              placeholder="Email Address"
+            />
+            <input
+              type="text"
+              class="text-input phone-input"
+              placeholder="Phone Number"
+            />
+            <textarea
+              type="text"
+              class="text-input message-input"
+              placeholder="Enter Message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-dark">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section B: Contact Info -->
+    <section id="contact-b" class="py-3 bg-dark">
+      <div class="container">
+        <div class="contact-info">
+          <div class="wow fadeInUp" data-wow-delay=".5s">
+            <i class="fas fa-envelope fa-2x"></i>
+            <h3>Email</h3>
+            <p>seanjwest@outlook.com</p>
+          </div>
+          <div class="wow fadeInUp" data-wow-delay=".8s">
+            <i class="fas fa-phone fa-2x"></i>
+            <h3>Phone</h3>
+            <p>+44 7538 220 935</p>
+          </div>
+          <div class="wow fadeInUp" data-wow-delay="1.1s">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <h3>London</h3>
+            <p>United Kingdom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-c" class="py-2">
+      <div class="container">
+        <h1>Let's Collaborate</h1>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content container">
+        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <div class="social">
+          <a href="https://linkedin.com/in/sean-west-b83192105"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/swest06"><i class="fab fa-github"></i></a>
+          <a href="https://stackexchange.com/users/13923124/sean?tab=top"
+            ><i class="fab fa-stack-exchange"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- wow -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <!-- page load logic -->
+    <script>
+      window.addEventListener("load", function() {
+        let loadScreen = document.getElementById("load-screen");
+        document.body.removeChild(loadScreen);
+
+        let body = document.getElementById("body");
+        body.classList.remove("preload");
+      });
+    </script>
+  </body>
+</html>
