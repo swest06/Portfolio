@@ -72,6 +72,10 @@
       </div>
     </header>
 
+    <!-- Back to top button -->
+    <!-- onmouseover="hoverFunction(this)" -->
+    <a id="back-to-top-btn" href="#header-home"><i class="fas fa-chevron-up fa-3x"></i></a>
+
     <!-- Section A -->
     <section id="home-a" class="text-center py-2 wow fadeInUp">
       <div class="container">
@@ -219,7 +223,7 @@
     <!-- Footer -->
     <footer id="main-footer">
       <div class="footer-content container">
-          <a href="#header-home"><i class="fas fa-chevron-up fa-3x"></i></a>
+          <!-- <a href="#header-home"><i class="fas fa-chevron-up fa-3x"></i></a> -->
           
         <p>Copyright &copy; 2019. All Rights Reserved</p>
         <div class="social">
@@ -255,6 +259,33 @@
           images[i].style.backgroundPositionY = offset * -0.3 + "px";
         }
       });
+
+      //Get the to the top button
+      let mybutton = document.getElementById("back-to-top-btn");
+
+      mybutton.onmouseover = function() {hoverFunction()};
+      mybutton.onmouseout = function() {scrollFunction()};
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        // if (document.body.scrollTop === document.body.clientHeight - window.innerHeight){
+        if (document.body.scrollTop > 1250 || document.documentElement.scrollTop > 1250){
+          mybutton.style.opacity = "1";
+        } else if (document.body.scrollTop > 560 || document.documentElement.scrollTop > 560) {
+          mybutton.style.opacity = ".5";
+        } else if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+          mybutton.style.opacity = "1";
+        } else {
+          mybutton.style.opacity = "0";
+        }
+      }
+
+      function hoverFunction(){
+        console.log("Mouse hover!");
+        mybutton.style.opacity = "1";
+      }
     </script>
 
     <!-- type effect -->

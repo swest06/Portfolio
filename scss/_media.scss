@@ -1,0 +1,213 @@
+// Tablets & Smaller
+@media (max-width: 1024px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+
+  #home-b .technologies {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 0rem;
+  }
+
+  #main-footer {
+    padding-right: 3rem;
+  }
+}
+
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      li {
+        padding: 1rem 1rem;
+
+        a {
+          margin: 0 1rem;
+        }
+      }
+    }
+    // #image-1 {
+    //   background-attachment: fixed !important;
+    //   height: 100% !important;
+    // }
+  }
+
+  //   to bottom,
+  //           rgba(0, 0, 58, 0.7),
+  //           rgba(0, 0, 58, 0.6)
+
+  #header {
+    &-home {
+      height: 10rem;
+      background-size: contain;
+      background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 58, 0.7),
+          rgba(0, 0, 58, 0.6)
+        ),
+        url(../img/london1.jpg) no-repeat center right/cover;
+
+      box-shadow: 1px 1px 3px $darker-color;
+
+      // BACKGROUND POSITIONING ISSUES ON PAGE RELOAD TO BE FIXED
+      //   background-size: contain;
+      //   background: linear-gradient(
+      //       to bottom,
+      //       rgba(0, 0, 58, 0.7),
+      //       rgba(0, 0, 58, 0.6)
+      //     ),
+      //     url(../img/london1.jpg) no-repeat center right/contain;
+      //   box-shadow: 1px 1px 3px #333;
+      //   background-attachment: fixed;
+
+      #logo {
+        height: 7rem;
+        padding-top: 20px;
+      }
+
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 3rem;
+      box-shadow: 1px 1px 3px $darker-color;
+
+      #logo {
+        display: none;
+      }
+
+      #main-nav li {
+        padding-top: 2rem;
+      }
+    }
+  }
+
+  #image-1 {
+    height: 40vh;
+  }
+
+  //Stack grid items
+  #home-b .technologies {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 0rem;
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  .my-2 {
+    margin: 0 0;
+  }
+
+  //Contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+
+      button[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+
+        div {
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #555;
+
+          &:last-child {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &-c {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  //   Footer
+  #main-footer {
+    height: 7rem;
+    padding-right: 0;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+
+      .social {
+        a {
+          &:last-child {
+            .fab {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Smaller screen smartphones
+@media (max-width: 400px) {
+  #main-nav {
+    ul {
+      li {
+        a {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Landscape
+@media (max-height: 580px) {
+  #header-home {
+    height: 100vh;
+
+    .header-content {
+      padding-top: 0rem;
+    }
+  }
+
+  #image-1 {
+    height: 75vh;
+  }
+}
+
+// iphone 5 landscape
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

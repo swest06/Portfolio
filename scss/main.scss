@@ -266,7 +266,7 @@ img {
 
       #android-studio {
         height: 60px;
-        width: 160px;
+        width: 140px;
         color: $darker-color;
         transition: all 1s;
         &:hover {
@@ -293,7 +293,7 @@ img {
         rgba(11, 11, 12, 0.8),
         rgba(11, 11, 12, 0.8)
       ),
-      $background-image2 no-repeat center right / cover;
+      $background-image2 repeat center right / cover;
     height: 45vh;
     width: 100%;
     color: $light-color;
@@ -318,7 +318,7 @@ img {
         "message message";
       grid-gap: 1.2rem;
       margin-bottom: 1.2rem;
-      // font-family: "Roboto Condensed", sans-serif;
+      // border-radius: 2px;
 
       // Grid Areas
       .name-input {
@@ -337,16 +337,21 @@ img {
         font-family: "Roboto Condensed", sans-serif;
         font-size: 15px;
         grid-area: message;
-        height: 100px;
+        height: 150px;
       }
 
       .text-input {
         padding: 0.5rem 1rem;
+        border: solid 1px $medium-color;
+        border-radius: 2px;
       }
     }
 
     button[type="submit"] {
       width: 33%;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 16px;
+      letter-spacing: 1px;
     }
   }
 
@@ -415,3 +420,39 @@ img {
     }
   }
 }
+
+#back-to-top-btn {
+  // display: none;
+  opacity: 0;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: $darker-color;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 2px;
+  height: 25px;
+  width: 36px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+
+  &:hover {
+    color: $main-color;
+    opacity: 1;
+  }
+
+  .fa-chevron-up {
+    // vertical-align: middle;
+    line-height: 0.6;
+  }
+}
+
+// import media queries
+@import "media";
